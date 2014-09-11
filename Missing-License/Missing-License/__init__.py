@@ -1,7 +1,12 @@
 from github import Github
 import sys
 
-g = Github("liam-middlebrook", sys.argv[1])
+if len(sys.argv) < 3:
+    print "command <username> <password> <githubrepo>\n"
+    print "command liam-middlebrook ****** repouser/testRepo"
+    exit()
+
+g = Github(sys.argv[1], sys.argv[2])
 
 body = """
 First, the standard disclaimer: I am not a lawyer, and this does not constitute legal or financial advice.
@@ -22,7 +27,7 @@ license-discuss@opensource.org
 Hope this helps, and happy hacking!
 """
 
-repo = g.get_repo(sys.argv[2])
+repo = g.get_repo(sys.argv[3])
 repo.create_issue("Missing LICENSE?", body)
 
-print "Issue Created at repo: " + sys.argv[2]
+print "Issue Created at repo: " + sys.argv[3]

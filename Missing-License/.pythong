@@ -1,0 +1,22 @@
+author: Liam Middlebrook
+classifiers: []
+description: Let GitHub users know if their projects are missing a license.
+directories: [/home/liam/repos/missing-license/Missing-License, /home/liam/repos/missing-license/Missing-License/docs,
+  /home/liam/repos/missing-license/Missing-License/Missing-License]
+docs_dir: /home/liam/repos/missing-license/Missing-License/docs
+email: liammiddlebrook@gmail.com
+encoding: utf8
+files: [/home/liam/repos/missing-license/Missing-License/MANIFEST.in, /home/liam/repos/missing-license/Missing-License/setup.py,
+  /home/liam/repos/missing-license/Missing-License/Missing-License/__init__.py]
+init_file: null
+keywords: [python, license, github]
+license: GPLv3
+manifest: /home/liam/repos/missing-license/Missing-License/MANIFEST.in
+name: Missing-License
+project_dir: /home/liam/repos/missing-license/Missing-License
+requires: [PyGithub]
+setup_file: /home/liam/repos/missing-license/Missing-License/setup.py
+shortname: Missing-License
+source_dir: /home/liam/repos/missing-license/Missing-License/Missing-License
+url: https://github.com/liam-middlebrook/missing-license
+version: 0.1.0
