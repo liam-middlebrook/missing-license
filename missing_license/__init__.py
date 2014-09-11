@@ -1,5 +1,6 @@
-from github import Github
 import sys
+
+from github import Github
 import click
 
 issue_body = """
