@@ -28,6 +28,7 @@ setup(
     zip_safe=False,
     install_requires=[
         "PyGithub",
+	"click",
     ],
     #TODO: Deal with entry_points
     #entry_points="""
