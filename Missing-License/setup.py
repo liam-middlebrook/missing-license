@@ -31,8 +31,8 @@ setup(
 	"click",
     ],
     #TODO: Deal with entry_points
-    #entry_points="""
-    #[console_scripts]
-    #pythong = pythong.util:parse_args
-    #"""
+    entry_points="""
+    [console_scripts]
+    missing-license = Missing_License:create_issue
+    """
 )
