@@ -39,4 +39,4 @@ def create_issue(username, repo, password):
    print "Issue Created at repo: " + repo
 
 if __name__ == '__main__':
-   create_issue();
+    create_issue()
