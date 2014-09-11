@@ -23,20 +23,25 @@ Hope this helps, and happy hacking!
 """
 
 @click.command()
-@click.option('--username', help='GitHub Username', prompt='Username: (testUser)')
-@click.option('--repo', help='GitHub Repo That is Missing License',
-               prompt='Repo: (testUser/myRepo)')
-@click.option('--password', prompt=True,
-               hide_input=True, confirmation_prompt=True,
-	       help='Your GitHub Password')
+@click.option('--username',
+              help='GitHub Username',
+              prompt='Username: (testUser)')
+@click.option('--repo',
+              help='GitHub Repo That is Missing License',
+              prompt='Repo: (testUser/myRepo)')
+@click.option('--password',
+              prompt=True,
+              hide_input=True,
+              confirmation_prompt=True,
+              help='Your GitHub Password')
 def create_issue(username, repo, password):
-   g = Github(username, password)
+    g = Github(username, password)
 
 
-   gitRepo = g.get_repo(repo)
-   gitRepo.create_issue("Missing LICENSE?", issue_body)
+    gitRepo = g.get_repo(repo)
+    gitRepo.create_issue("Missing LICENSE?", issue_body)
 
-   print "Issue Created at repo: " + repo
+    print "Issue Created at repo: " + repo
 
 if __name__ == '__main__':
     create_issue()
