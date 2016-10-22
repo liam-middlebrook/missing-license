@@ -1,2 +1,2 @@
-PyGithub>=1.25.0
-Click>=3.1
+flask
+github-flask
