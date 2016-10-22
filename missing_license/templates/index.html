@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Missing License!</title>
+</head>
+
+<body>
+    {% if status == "ok" %}
+    <strong>Submission Successful!</strong>
+    {% elif status == "bad" %}
+    <strong>Submission Failed, Bad Username/Repo Combination</strong>
+    {% endif %}
+
+    {% if logged_in %}
+    <form action="/file" method="post">
+        Username: <input type="text" name="username"><br>
+        Repository: <input type="text" name="repository"><br>
+        <input type="submit" value="Submit">
+    </form>
+    <p><a href="/logout">Log Out</a></p>
+    {% else %}
+    <p>Please <a href="/login">Log In</a></p>
+    {% endif %}
+</body>
+</html>
