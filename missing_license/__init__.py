@@ -131,7 +131,7 @@ def login():
     if session.get('user_id', None) is None:
         return github.authorize(scope="public_repo")
     else:
-        return 'Already logged in'
+        return 'Already logged in <a href="/logout">Logout</a>'
 
 
 @app.route('/logout')
